@@ -9,6 +9,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { LogOutIcon } from "lucide-react"
+import ToggleTheme from "./ToggleTheme"
 
 export default function Navbar() {
     return (
@@ -19,7 +20,10 @@ export default function Navbar() {
                         ChadGPT
                     </h1>
                 </Link>
-                <UserDropdown />
+                <div className="flex gap-4 justify-center items-center">
+                    <UserDropdown />
+                    <ToggleTheme />
+                </div>
             </nav>
         </header>
     )
@@ -30,8 +34,8 @@ export function UserDropdown() {
         <DropdownMenu>
             <DropdownMenuTrigger>
                 <Avatar>
-                    <AvatarImage src="https://github.com/shadcn.png" />
-                    <AvatarFallback>CN</AvatarFallback>
+                    <AvatarImage src="https://avatars.githubusercontent.com/nabeelv7" />
+                    <AvatarFallback>V7</AvatarFallback>
                 </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" sideOffset={10}>
