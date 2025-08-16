@@ -73,7 +73,7 @@ export default function AITextArea() {
                         </AIInputModelSelectContent>
                     </AIInputModelSelect>
                 </AIInputTools>
-                <AIInputSubmit disabled={!text} status={status} />
+                <AIInputSubmit aria-label="Start or Stop Ai generation" disabled={!text} status={status} />
             </AIInputToolbar>
         </AIInput>
     );
