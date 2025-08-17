@@ -15,7 +15,7 @@ const themes = [
     { id: 'high-contrast', name: 'High Contrast' },
 ]
 
-export default function ThemeSelector() {
+export default function ToggleTheme() {
     const [theme, setTheme] = useState('light')
 
     // On mount, read saved theme from localStorage

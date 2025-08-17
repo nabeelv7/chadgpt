@@ -1,6 +1,5 @@
 import AITextArea from "@/components/AITextArea";
 import Navbar from "@/components/Navbar";
-import ThemeSwitcher from "@/components/ToggleTheme";
 
 export default function Home() {
   return (
