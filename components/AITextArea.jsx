@@ -46,7 +46,7 @@ export default function AITextArea() {
     };
 
     return (
-        <AIInput onSubmit={handleSubmit} className="w-150">
+        <AIInput onSubmit={handleSubmit} className="md:w-150 w-[calc(100vw-30px)]">
             <AIInputTextarea onChange={(e) => setText(e.target.value)} value={text} />
             <AIInputToolbar>
                 <AIInputTools>

@@ -10,16 +10,20 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { LogOutIcon } from "lucide-react"
 import ToggleTheme from "./ToggleTheme"
+import { SidebarTrigger } from "./ui/sidebar"
 
 export default function Navbar() {
     return (
         <header>
             <nav className="flex w-full justify-between p-5 border">
-                <Link href="/">
+                <Link href="/" className="max-md:hidden">
                     <h1 className="text-2xl font-medium">
                         ChadGPT
                     </h1>
                 </Link>
+                <div className="md:hidden flex justify-center items-center">
+                    <SidebarTrigger />
+                </div>
                 <div className="flex gap-4 justify-center items-center">
                     <UserDropdown />
                     <ToggleTheme />
@@ -44,11 +48,14 @@ export function UserDropdown() {
                     <p className="opacity-80">nabeel@email.com</p>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Profile</DropdownMenuItem>
-                <DropdownMenuItem>Billing</DropdownMenuItem>
-                <DropdownMenuItem variant="destructive">
-                    <LogOutIcon />
-                    Logout
+                <DropdownMenuItem asChild>
+                    <Link href="/dashboard">Dashboard</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild variant="destructive">
+                    <Link href="/login">
+                        <LogOutIcon />
+                        Logout
+                    </Link>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
